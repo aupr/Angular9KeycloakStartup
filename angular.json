@@ -18,15 +18,18 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/keycloak.json"
             ],
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/custom.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -41,7 +44,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -86,7 +88,8 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/keycloak.json"
             ],
             "styles": [
               "src/styles.css"
@@ -120,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "myapp-for-update"
+    }
+  },
+  "defaultProject": "myapp-for-update",
+  "cli": {
+    "analytics": "c9412062-6b46-479d-bf70-c77bfd416763"
+  }
 }
