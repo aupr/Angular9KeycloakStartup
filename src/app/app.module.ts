@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { OptionsComponent } from './options/options.component';
 import {RouterModule} from '@angular/router';
 import {KeycloakAngularModule, KeycloakService} from 'keycloak-angular';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {KeycloakAngularModule, KeycloakService} from 'keycloak-angular';
     BrowserModule,
     RoutingModule,
     RouterModule,
-    KeycloakAngularModule
+    KeycloakAngularModule,
+    HttpClientModule
   ],
   providers: [
     {
