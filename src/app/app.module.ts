@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {APP_INITIALIZER, NgModule} from '@angular/core';
-import { initializer } from './utils/app-init';
+import { initializer } from './utils/keycloak-init';
 
 import { AppComponent } from './app.component';
 import {RoutingModule} from './routing.module';

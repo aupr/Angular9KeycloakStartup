@@ -17,7 +17,7 @@ export class OptionsComponent implements OnInit {
   ngOnInit(): void {
     try {
       console.log('hello hello');
-      const userDetails = this.keycloakAngular.getKeycloakInstance().token;
+      const userDetails = this.keycloakAngular.getKeycloakInstance();
       console.log(userDetails);
     } catch (e) {
       console.log('Failed to load user details', e);

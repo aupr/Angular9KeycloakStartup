@@ -1,12 +1,9 @@
 import { KeycloakService } from 'keycloak-angular';
+import {environment} from '../../environments/environment';
 
 export function initializer(keycloak: KeycloakService): () => Promise<any> {
   return (): Promise<any> => keycloak.init({
-    config: {
-      url: 'https://kc.ariexon.com/auth/',
-      realm: 'sincos',
-      clientId: 'my-ng-app'
-    },
+    config: environment.keycloakConfig,
     initOptions: {
       onLoad: 'login-required',
       checkLoginIframe: false
